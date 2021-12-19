@@ -1,0 +1,74 @@
+.header {
+   position: fixed;
+   top: 0;
+   width: 100%;
+   z-index: 9999;
+   background-color: $color-bg;
+
+   &__form {
+      width: 60%;
+      margin: auto;
+      margin-bottom: 25px;
+      border: 1px solid $color-gray;
+      border-radius: 5px;
+      padding: 5px;
+      display: flex;
+
+      @include respond(900){
+         width: 80%;
+      }
+
+      @include respond(500){
+         width:90%;
+      }
+
+      input[type="text"] {
+         flex: 1;
+         background: transparent;
+         padding: 10px;
+         color: $color-gray;
+         
+         &::placeholder {
+            color: $color-gray-dark;
+         }
+      }
+
+      input[type="submit"] {
+         width: 50px;
+         padding: 10px;
+         font-size: 15px;
+         font-weight: 600;
+         background: transparent;
+         color: $color-gray;
+         cursor: pointer;
+      }
+   }
+
+   &__loading{
+      text-align: center;
+      font-size: 20px;
+      font-weight: 700;
+      color: $color-gray;
+      padding: 0 10px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   &__url {
+      text-align: center;
+      color: $color-gray-dark;
+      font-size: 16px;
+      padding: 0 10px;
+
+      @include respond(900){
+         font-size: 14px;
+      }
+
+      span {
+         color: $color-gray;
+      }
+   }
+}
+
